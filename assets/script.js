@@ -8,4 +8,10 @@
 
 // e.g. 12 - Take lunch --> Save to local storage --> Save 
 
-//
+/*
+NOtes: Hours = object? 
+
+*/
+
+var currentDate = moment().format("MMM Do, YYYY");
+$("#currentDay").text(currentDate);
