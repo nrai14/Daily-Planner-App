@@ -55,3 +55,11 @@ $("#currentDay").text(currentDate);
         // JavaScript needs to record the current time and apply a class to all timeblocks based on current time and the identifier of the timeblock to compare it to 
                 // Gives past time- gray, present - red, future - green
                 // Figure out way to target entire div and find out value, maybe an ID 
+        
+//  two logics: 1) If (adds the class) 2) Event handler (save button - store data from textarea into local storage) 
+
+// eventhandler example
+
+$(".saveBtn").click(function(){
+    console.log($(this).parent())
+})
