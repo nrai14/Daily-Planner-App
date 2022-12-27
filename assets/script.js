@@ -41,3 +41,17 @@ $("#currentDay").text(currentDate);
     // moment js to add time slot ++hour
     // add texterea and button 
 
+
+
+
+    // Timeblocks in HTML 
+    // JS functionality comes from saving data (local storage)
+    
+
+
+
+    // ONCE USER WRITES TASKS - RECORD INPUT ON AN EVENT (SAVE BUTTON IS CLICKED - 1) record value of textarea 2) save data to local storage 
+
+        // JavaScript needs to record the current time and apply a class to all timeblocks based on current time and the identifier of the timeblock to compare it to 
+                // Gives past time- gray, present - red, future - green
+                // Figure out way to target entire div and find out value, maybe an ID 
