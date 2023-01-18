@@ -16,8 +16,18 @@ NOtes: Hours = object?
 
 // Current date: Day Time
 
-var currentDate = moment().format("dddd, MMMM YYYY");
+var currentDate = moment().format("dddd, MMMM YYYY, h:mm:ss a");
 $("#currentDay").text(currentDate);
+
+var hour = moment().format("h");
+
+
+
+// jQuery to target textarea 
+
+    
+
+$("textarea").addClass("past")
 
 
 // for every hour from 9 to 5, create a time block row 
