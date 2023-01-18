@@ -22,12 +22,40 @@ $("#currentDay").text(currentDate);
 var hour = moment().format("h");
 
 
+//&
+
+// .each function from jQuery is similar to forEach - both need an array of data to target 
+
+// target each hour
+$(".description").each(function() {
+
+    var currentHour = $(this).attr("id")
+
+    if (hour > currentHour) {
+    $("#" + hour).addClass("past");
+   
+}
+    
+})
+// ADD ELSE IF STATEMENTS TO CHANGE COLOURS IF TIME IS AHEAD OR PRESENT 
+
+
+
+
+
+
+
+
+
+
+
+// &
+
 
 // jQuery to target textarea 
 
-    
 
-$("textarea").addClass("past")
+
 
 
 // for every hour from 9 to 5, create a time block row 
@@ -70,6 +98,28 @@ $("textarea").addClass("past")
 
 // eventhandler example
 
+// THIS ALLOWS TO GAIN ACCESS 
+
+//  local storage.set item method 
+//  two parameters inside 
 $(".saveBtn").click(function(){
     console.log($(this).parent())
+    console.log($(this).siblings("textarea").val())
 })
+
+
+// *********local storage********
+//  Store data in an object
+
+//  deal with stringified jSON
+
+//  1) Access 
+//  2) Pair content of timeblock with the identifier of where the time came from 
+//  3) Have those values? Store it in jSON (store in object)
+//  4) Goes into local storage localStorage.setItem(key, value)
+
+
+//  key will be hour (id) // value will be user text
+
+
+// 
