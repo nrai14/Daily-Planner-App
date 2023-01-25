@@ -16,10 +16,10 @@ NOtes: Hours = object?
 
 // Current date: Day Time
 
-var currentDate = moment().format("dddd, MMMM YYYY, h:mm:ss a");
+var currentDate = moment().format("dddd, MMMM YYYY, HH:mm:ss a");
 $("#currentDay").text(currentDate);
 
-var hour = moment().format("h");
+var hour = moment().format("HH");
 
 
 //&
@@ -35,7 +35,13 @@ $(".description").each(function() {
     $("#" + hour).addClass("past");
    
 }
+    else if (hour = currentHour) {
+        $("#" + hour).addClass("present");
+    }
     
+    else {
+        $("#" + hour).addClass("future");
+    }
 })
 // ADD ELSE IF STATEMENTS TO CHANGE COLOURS IF TIME IS AHEAD OR PRESENT 
 
