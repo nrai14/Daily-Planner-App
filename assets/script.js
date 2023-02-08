@@ -128,4 +128,6 @@ $(".saveBtn").click(function(){
 //  key will be hour (id) // value will be user text
 
 
-// 
+// Pseudo coding 
+
+// Need to check if the time blocks are working --> change colour --> Save to local storage 
