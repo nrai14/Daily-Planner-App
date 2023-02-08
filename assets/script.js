@@ -41,27 +41,11 @@ $(".description").each(function() {
         $("#" + currentHour).addClass("future");
     }
 })
-// ADD ELSE IF STATEMENTS TO CHANGE COLOURS IF TIME IS AHEAD OR PRESENT 
 
 
 
-// LOCAL STORAGE TO SAVE USER INPUT WHEN CLICKING SVAE BUTTON 
 
-function saveInput() {
-
-    // Need to target save button
-
-    $(".saveBtn").
-
-    // Need to have event listener so that when save button is clicked, it fires to local storage 
-    // Do we call this function every time save button is clicked?? 
-
-    localStorage.setItem('userInput', input.value);
-
-    localStorage.getItem
-
-
-}
+   
 
 
 
@@ -74,9 +58,25 @@ function saveInput() {
 //  local storage.set item method 
 //  two parameters inside 
 $(".saveBtn").click(function(){
-    console.log($(this).parent())
-    console.log($(this).siblings("textarea").val())
+    var userInput = $(this).siblings
+    ("textarea").val();
+    var textAreaID = $(this).siblings
+    ("textarea").attr("id");
+    var event = {
+        id: textAreaID, 
+        eventNote: userInput 
+     }
+    localStorage.setItem("event", JSON.stringify(event))
 })
+// store above as an object ^
+
+// JSON STRINGIFIED ON LINE 69 TO SEE DATA AS A STRING 
+// DON'T WANT TO REPLACE OBJECT - TO ADD ANOTHER OBJECT 
+// CHECK IF DATA IS TEHRE, THEN ADD ONTO IT, IF EMPTY, THEN SEND EMPTY ARRAY 
+// GET ITEM OUTSIDE OF FUCNTION 
+
+
+
 
 
 // *********local storage********
