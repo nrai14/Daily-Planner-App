@@ -45,7 +45,9 @@ $(".description").each(function() {
 
 
 
-   
+const taskArray = retrieve();
+
+displayTasks(taskArray);
 
 
 
@@ -66,8 +68,36 @@ $(".saveBtn").click(function(){
         id: textAreaID, 
         eventNote: userInput 
      }
-    localStorage.setItem("event", JSON.stringify(event))
+    localStorage.setItem("hour" + event.id, JSON.stringify(event))
 })
+
+// Function now to render items from local storage and return to relevant places
+
+function retrieve() {
+
+
+    var storage = [ ];
+
+    for(var i = 0; i < localStorage.length; i++) {
+       
+    var key = localStorage.key(i) 
+    var event = JSON.parse(localStorage.getItem(key))
+    storage.push(event)
+    }
+    return storage; 
+    
+}
+
+function displayTasks(tasksArray) {
+    tasksArray.forEach(task => {
+      console.log(task)
+
+
+        $(`#${task.id}`).text(task.eventNote)
+    });
+}
+
+
 // store above as an object ^
 
 // JSON STRINGIFIED ON LINE 69 TO SEE DATA AS A STRING 
