@@ -19,7 +19,7 @@ It uses Moment.js library to work with date and time.
 
 ## Installation 
 
-Use via the deployed site: 
+Use via the deployed site: https://nrai14.github.io/Daily-Planner-App/ 
 
 ## Usage 
 
